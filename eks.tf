@@ -25,7 +25,7 @@ resource "aws_iam_role_policy_attachment" "demo-AmazonEKSClusterPolicy" {
 
 resource "aws_eks_cluster" "demo" {
   name     = "demo"
-  kubernetes_version            = "1.19"
+  cluster_version            = "1.19"
   role_arn = "aws_iam_role.demo.arn"
 
   vpc_config {
